@@ -71,7 +71,7 @@ TOP_K = 10
 # Tried in order; if one fails (rate limit / model retired) the next is used.
 # Override without editing code: GROQ_MODELS="model-a,model-b"
 GROQ_MODELS = [m.strip() for m in os.environ.get(
-    "GROQ_MODELS", "llama-3.3-70b-versatile,llama-3.1-8b-instant"
+    "GROQ_MODELS", "openai/gpt-oss-120b,llama-3.1-8b-instant"
 ).split(",") if m.strip()]
 OPENAI_FALLBACK_MODEL = "gpt-3.5-turbo-instruct"  # completion-style model used by langchain OpenAI()
 
